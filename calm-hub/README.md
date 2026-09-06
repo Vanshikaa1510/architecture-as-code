@@ -85,6 +85,13 @@ So on a fresh clone, `-Pserver-only` produces a jar/dev server with **no UI at a
 was last built. Never use `-Pserver-only` for a release, Docker image, or CI build that
 needs to ship the UI.
 
+### Observability & Logging Configuration
+
+| Environment Variable | Default Value | Description |
+| :--- | :--- | :--- |
+| `CALM_OTEL_ENABLED` | `false` | Enables OpenTelemetry OTLP trace export |
+| `OTEL_EXPORTER_OTLP_ENDPOINT` | `http://localhost:4317` | Collector endpoint for OpenTelemetry traces |
+| `CALM_JSON_LOGGING_ENABLED` | `false` | Enables structured JSON console logging |
 ### Storage Modes
 
 Calm Hub supports two different storage modes:
